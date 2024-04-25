@@ -10,6 +10,44 @@
             background-attachment: fixed;
         }
 
+        /* Add this CSS for customizing the audio player */
+        audio {
+            width: 300px; /* Adjust width as needed */
+            margin: 20px auto;
+        }
+
+        audio::-webkit-media-controls {
+            background-color: #9612eb; /* Background color of the audio controls */
+            border-radius: 10px; /* Border radius for rounded corners */
+        }
+
+        audio::-webkit-media-controls-play-button {
+            color: #fff; /* Color of the play button */
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+            background-color: #fff; /* Color of the volume slider */
+        }
+
+        audio::-webkit-media-controls-seek-back-button,
+        audio::-webkit-media-controls-seek-forward-button {
+            color: #fff; /* Color of the seek buttons */
+        }
+
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #fff; /* Color of the time display */
+        }
+
+        audio::-webkit-media-controls-timeline {
+            background-color: #fff; /* Color of the timeline bar */
+        }
+
+        audio::-webkit-media-controls-volume-slider-container {
+            width: 100px; /* Adjust volume slider width as needed */
+        }
+        /* End of custom audio player styling */
+
         .card {
             position: relative;
             width: 300px;
@@ -108,20 +146,21 @@
         }
 
         audio:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease-in-out;
-}
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease-in-out;
+        }
 
     </style>
 </head>
-<body><br><br>
-<center>
-    <audio controls autoplay loop>
-        <source src="happy-birthday-main/music.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio></center>
-
-
+<body>
+    <br><br>
+    <center>
+        <!-- Audio player with custom styling -->
+        <audio controls autoplay loop>
+            <source src="happy-birthday-main/music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </center>
 
     <div class="card">
         <div class="back"></div>
@@ -135,8 +174,6 @@
             <p>May your special day be <u>as bright and beautiful as your eyes</u>, and may every moment be filled with laughter and love. Here's to another year of wonderful adventures and endless possibilities. Cheers to you, and may your wishes come true today and always!</p>
         </div> 
     </div><br>
-    <center><span style="background-color: #fc2828; color: rgb(255, 255, 255);">Click to open the card.</span></center>
-    
-
+    <center><span style="background-color: #8400ff; color: rgb(255, 255, 255);">Click to open the card.</span></center>
 </body>
 </html>
