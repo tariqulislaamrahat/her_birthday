@@ -3,6 +3,7 @@
 <head>
     <title></title>
     <style type="text/css">
+        /* Your existing CSS styles */
         body {
             height: 100%;
             margin: 0;
@@ -162,20 +163,24 @@
         </audio>
     </center>
     <br>
-    <center><span style="background-color: #9612eb; color: rgb(255, 255, 255);" onclick="openCard()">Click to open the card.</span></center>
+    <center><span style="background-color: #9612eb; color: rgb(255, 255, 255);" id="openCardButton">Click to open the card.</span></center>
 
     <script>
         // JavaScript function to open the card when music player button is pressed
-        function openCard() {
+        document.getElementById("musicPlayer").addEventListener("play", function() {
             var card = document.getElementById("birthdayCard");
-            var player = document.getElementById("musicPlayer");
-            // Check if the music player is playing
-            if (!player.paused) {
-                // Simulate click event on the card to trigger hover effect (opens the card)
-                var event = new MouseEvent('mouseenter');
-                card.dispatchEvent(event);
-            }
-        }
+            // Simulate hover effect on the card (opens the card)
+            card.classList.add("hovered");
+        });
+
+        // Click event listener for opening the card
+        document.getElementById("openCardButton").addEventListener("click", function() {
+            var card = document.getElementById("birthdayCard");
+            // Remove the hover effect to close the card if it's already opened
+            card.classList.remove("hovered");
+            // Simulate hover effect on the card (opens the card)
+            card.classList.add("hovered");
+        });
     </script>
 </body>
 </html>
