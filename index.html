@@ -16,7 +16,6 @@
             margin: 20px auto;
         }
 
-       
         audio::-webkit-media-controls-play-button {
             color: #9612eb; /* Color of the play button */
         }
@@ -34,8 +33,6 @@
         audio::-webkit-media-controls-time-remaining-display {
             color: #9612eb; /* Color of the time display */
         }
-
-       
 
         audio::-webkit-media-controls-volume-slider-container {
             width: 100px; /* Adjust volume slider width as needed */
@@ -144,6 +141,25 @@
             transition: box-shadow 0.3s ease-in-out;
         }
 
+        /* Custom styling for the audio player wrapper */
+        .audio-wrapper {
+            border: 2px solid #9612eb;
+            border-radius: 10px;
+            padding: 10px;
+            display: inline-block;
+            position: relative; /* Add relative positioning */
+        }
+
+        .note {
+            position: absolute; /* Position the note absolutely within the wrapper */
+            top: -20px; /* Adjust the top position */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            font-family: 'Aharoni', sans-serif;
+            font-size: 1.2em;
+            color: #9612eb;
+        }
+
     </style>
 </head>
 <body>
@@ -156,18 +172,20 @@
             </div>
         </div>
         <div class="text-container">
-            <p id="head"><b>Happy Birthday!</b></p>
-            <p>May your special day be <u>as bright and beautiful as your eyes</u>, and may every moment be filled with laughter and love. Here's to another year of wonderful adventures and endless possibilities. Cheers to you, and may your wishes come true today and always!</p>
+            <p id="head"><b><span style="background-color: #eb1248; color: rgb(255, 255, 255);"><i>Happy Birthday!</i></span></b></p>
+           <p>Happy birthday to the crush of many, including mine!👀 Wishing you a day filled with smiles, laughter, and all the things that make your heart flutter. Here's to another year of capturing attention and melting hearts. Keep being the captivating soul that you are!🎉🥰</p>
         </div> 
     </div> <br>
     <center><span style="background-color: #9612eb; color: rgb(255, 255, 255);">Click to open the card.</span></center>
     <br><br>
     <center>
         <!-- Audio player with custom styling -->
-        <audio controls autoplay loop>
-            <source src="happy-birthday-main/music.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="audio-wrapper">
+            <audio controls autoplay loop>
+                <source src="happy-birthday-main/music.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     </center>
 </body>
 </html>
