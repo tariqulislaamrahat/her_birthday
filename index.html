@@ -3,7 +3,6 @@
 <head>
     <title></title>
     <style type="text/css">
-        /* Your existing CSS styles */
         body {
             height: 100%;
             margin: 0;
@@ -17,6 +16,7 @@
             margin: 20px auto;
         }
 
+       
         audio::-webkit-media-controls-play-button {
             color: #9612eb; /* Color of the play button */
         }
@@ -35,10 +35,11 @@
             color: #9612eb; /* Color of the time display */
         }
 
+       
+
         audio::-webkit-media-controls-volume-slider-container {
             width: 100px; /* Adjust volume slider width as needed */
         }
-
         /* End of custom audio player styling */
 
         .card {
@@ -50,6 +51,7 @@
             box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
             background-image: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, 0.5)),
                 url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-4uCqocy9_rRN6LmbblhqdtYwLNcNFEGQn19JExIVJ916TytNWoQnrHqWKK4UOy3zUOEbQ9ecdS2WAZjc5_Sl_KlHWg-oZweIMbEXam98CgcI2Di4-VANU51O4Js47XMeJ-weTbSqoaD3xx8zlt8ERerHGbTtYh2FDVKGIE1oQXTeCOVPi8nEtV9n882W/s500/Tariqul%20Islam%20(4).png");
+
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* Do not repeat the image */
             background-size: cover;
@@ -77,6 +79,7 @@
             line-height: 1.4;
             font-family: 'The Brush Script MT';
             color: #331717;
+
             text-align: center;
             margin: 30px auto 0px auto;
         }
@@ -89,6 +92,8 @@
             border: 10px solid #9612eb;
             backface-visibility: hidden;
             background-color: #9612eb;
+            /* background-image: url($cover-image);
+             */
             background-size: contain;
             transform-style: preserve-3d;
             transform-origin: 0% 50%;
@@ -138,11 +143,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: box-shadow 0.3s ease-in-out;
         }
+
     </style>
 </head>
 <body>
 
-    <div class="card" id="birthdayCard">
+    <div class="card">
         <div class="back"></div>
         <div class="front">
             <div class="imgset">
@@ -153,34 +159,15 @@
             <p id="head"><b>Happy Birthday!</b></p>
             <p>May your special day be <u>as bright and beautiful as your eyes</u>, and may every moment be filled with laughter and love. Here's to another year of wonderful adventures and endless possibilities. Cheers to you, and may your wishes come true today and always!</p>
         </div> 
-    </div>
+    </div> <br>
+    <center><span style="background-color: #9612eb; color: rgb(255, 255, 255);">Click to open the card.</span></center>
     <br><br>
     <center>
         <!-- Audio player with custom styling -->
-        <audio controls autoplay loop id="musicPlayer">
+        <audio controls autoplay loop>
             <source src="happy-birthday-main/music.mp3" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
     </center>
-    <br>
-    <center><span style="background-color: #9612eb; color: rgb(255, 255, 255);" id="openCardButton">Click to open the card.</span></center>
-
-    <script>
-        // JavaScript function to open the card when music player button is pressed
-        document.getElementById("musicPlayer").addEventListener("play", function() {
-            var card = document.getElementById("birthdayCard");
-            // Simulate hover effect on the card (opens the card)
-            card.classList.add("hovered");
-        });
-
-        // Click event listener for opening the card
-        document.getElementById("openCardButton").addEventListener("click", function() {
-            var card = document.getElementById("birthdayCard");
-            // Remove the hover effect to close the card if it's already opened
-            card.classList.remove("hovered");
-            // Simulate hover effect on the card (opens the card)
-            card.classList.add("hovered");
-        });
-    </script>
 </body>
 </html>
