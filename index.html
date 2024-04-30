@@ -172,11 +172,11 @@
             </div>
         </div>
         <div class="text-container">
-            <p id="head"><b><span style="background-color: #eb1248; color: rgb(255, 255, 255);"><i>Happy Birthday!</i></span></b></p>
-           <p>Happy birthday to the crush of many, including mine!👀 Wishing you a day filled with smiles, laughter, and all the things that make your heart flutter. Here's to another year of capturing attention and melting hearts. Keep being the captivating soul that you are!🎉🥰</p>
+            <p id="head"><b><span style="background-color: #ffffff; color: #9612eb;">Happy Birthday!</span></b></p>
+           <p>Happy birthday to the crush of many, including mine!👀 Wishing you a day filled with smiles, laughter, and all the things that make your heart flutter. Here's to another year of being present on Earth and continuing to melt hearts. Keep being the captivating soul that you are!🎉🥰</p>
         </div> 
     </div> <br>
-    <center><span style="background-color: #9612eb; color: rgb(255, 255, 255);">Click to open the card.</span></center>
+    <center><span style="background-color: #9612eb; color: rgb(255, 255, 255);">Open the card.</span></center>
     <br><br>
     <center>
         <!-- Audio player with custom styling -->
@@ -185,7 +185,30 @@
                 <source src="happy-birthday-main/music.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
+        <center> <span style="color: #9612eb;"><b>This song is owned by you, so I dedicated it to you.</b></span>
+        </center>
         </div>
     </center>
+
+    <script src="./confetti.js"></script>
+    <script>
+
+      // Ensure confetti animation starts when the page has fully loaded
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        console.log("start");
+        confetti.start();
+        setTimeout(() => {
+            console.log("stop");
+            confetti.stop();
+        }, 5000); // Stop confetti after 5 seconds
+    }, 1000); // Start confetti after 1 second
+});
+
+
+      startit();
+      stopit();
+    </script>
+    
 </body>
 </html>
